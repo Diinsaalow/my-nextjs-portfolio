@@ -45,7 +45,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
