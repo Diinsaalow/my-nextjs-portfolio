@@ -27,7 +27,7 @@ const cabinetGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Dilnsaalow | Portfolio",
+  title: "Ismail A. | Portfolio",
   description: "Personal portfolio website showcasing my work and skills",
 };
 

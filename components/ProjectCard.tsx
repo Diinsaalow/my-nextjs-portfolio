@@ -175,7 +175,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.liveUrl}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center text-gray-600 dark:text-[#A8B3CF] hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium'
+                className='flex items-center bg-primary text-white hover:bg-primary/90 transition-colors text-sm font-medium px-4 py-2 rounded-md'
                 onClick={(e) => e.stopPropagation()}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

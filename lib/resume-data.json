@@ -1,0 +1,98 @@
+{
+  "workExperience": [
+    {
+      "id": 4,
+      "position": "Full-stack Developer",
+      "company": "JTech",
+      "duration": "Present",
+      "period": "February 2025 - Present",
+      "technologies": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "PostgreSQL"
+      ],
+      "description": "Developing full-stack web applications using modern technologies and frameworks, handling both frontend and backend development."
+    },
+    {
+      "id": 1,
+      "position": "Frontend Developer Intern",
+      "company": "ZitAcademy",
+      "duration": "3 Months",
+      "period": "2023",
+      "technologies": ["React.JS", "Material UI", "Tailwind CSS"],
+      "description": "Worked on building modern web applications using React.js and contemporary UI frameworks."
+    },
+    {
+      "id": 2,
+      "position": "Graphic Designer",
+      "company": "Arwah Technology",
+      "duration": "2023-2025",
+      "period": "2023-2025",
+      "technologies": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe InDesign"
+      ],
+      "description": "Creating visual content and design solutions for various digital and print media."
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor",
+      "field": "Computer Application & IT",
+      "institution": "Jamhuriya University of Science and Technology (JUST)",
+      "period": "2022-Present",
+      "status": "In Progress",
+      "location": "Mogadishu, Somalia"
+    },
+    {
+      "id": 2,
+      "degree": "High Level (Secondary)",
+      "institution": "Al-qalam Primary & Secondary School",
+      "period": "2017-2021",
+      "status": "Completed"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Material UI",
+      "Redux",
+      "REST APIs"
+    ],
+    "backend": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "PostgreSQL",
+      "Firebase",
+      "REST APIs",
+      "GraphQL",
+      "JWT Authentication",
+      "API Design"
+    ],
+    "design": ["Figma", "Adobe XD", "Adobe Photoshop", "Adobe Illustrator"],
+    "tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Docker",
+      "Postman",
+      "Vercel",
+      "Responsive Design",
+      "SEO",
+      "Performance Optimization",
+      "Testing"
+    ]
+  }
+}
