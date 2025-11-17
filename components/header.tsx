@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { ModeToggle } from '@/components/mode-toggle';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -79,7 +80,7 @@ export function Header() {
             isScrolled ? 'bg-background/80 backdrop-blur-md ' : 'bg-background'
           )}
         >
-          <a
+          <Link
             href='#home'
             className='font-bold  text-lg'
             onClick={(e) => {
@@ -88,12 +89,12 @@ export function Header() {
             }}
           >
             Ismail A.
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className='hidden md:flex items-center space-x-6'>
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={(e) => {
@@ -108,7 +109,7 @@ export function Header() {
                 )}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
