@@ -77,7 +77,7 @@ export function Header() {
         <div
           className={cn(
             'border rounded-lg flex items-center justify-between px-4 py-2',
-            'bg-background/80 backdrop-blur-md shadow-lg'
+            'bg-background/80 backdrop-blur-md '
           )}
         >
           <Link
@@ -136,7 +136,7 @@ export function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className='md:hidden bg-background border-b shadow-lg'>
+        <div className='md:hidden bg-background border-b '>
           <nav className='container mx-auto px-4 py-4 flex flex-col space-y-3'>
             {navItems.map((item) => (
               <a
