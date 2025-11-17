@@ -14,14 +14,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='pt-20'>
-        <section id='home'>
-          <div>
-            {/* <HeroSection /> */}
-            {/* <HeroSection2 /> */}
-            <HeroSection3 />
-          </div>
-        </section>
+      <main>
+        <HeroSection3 />
 
         <section id='about' className='py-16 md:py-24 bg-muted/30'>
           <div className='container mx-auto px-4'>

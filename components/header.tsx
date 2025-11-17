@@ -77,7 +77,7 @@ export function Header() {
         <div
           className={cn(
             'border rounded-lg flex items-center justify-between px-4 py-2',
-            isScrolled ? 'bg-background/80 backdrop-blur-md ' : 'bg-background'
+            'bg-background/80 backdrop-blur-md shadow-lg'
           )}
         >
           <Link

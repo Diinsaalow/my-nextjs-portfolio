@@ -4,6 +4,8 @@ import { ArrowRight, Code2, Palette, Rocket, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { GridPattern } from './magicui/grid-pattern';
+import { cn } from '@/lib/utils';
 
 export function HeroSection3() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,9 +32,24 @@ export function HeroSection3() {
 
   return (
     <section
+      id='home'
       ref={containerRef}
-      className='relative min-h-screen flex items-center overflow-hidden'
+      className='relative h-screen w-full flex items-center justify-center overflow-hidden'
     >
+      {/* Grid Pattern Background */}
+      <GridPattern
+        squares={[
+          [4, 4],
+          [5, 1],
+          [8, 2],
+          [5, 3],
+        ]}
+        className={cn(
+          '[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]',
+          '-inset-x-12 inset-y-[-60%] h-[170%] skew-y-12'
+        )}
+      />
+
       {/* Animated background shapes */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
         <motion.div
@@ -86,11 +103,11 @@ export function HeroSection3() {
 
       <motion.div
         style={{ y, opacity }}
-        className='container mx-auto px-4 py-20 relative z-10'
+        className='container mx-auto px-4 relative z-10 w-full h-full'
       >
-        <div className='grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto'>
+        <div className='grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto h-full'>
           {/* Left Content */}
-          <div className='space-y-8'>
+          <div className='space-y-8 flex flex-col justify-center'>
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -207,18 +224,18 @@ export function HeroSection3() {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className='relative lg:block hidden'
+            className='relative lg:flex hidden items-end h-full'
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className='relative aspect-[3/4] rounded-2xl overflow-hidden'
+              className='relative w-full h-[85vh] rounded-t-3xl overflow-hidden'
             >
               <Image
                 src='/images/mine-4.png'
                 alt='Ismail Abdifadil'
                 fill
-                className='object-cover '
+                className='object-cover object-top'
                 priority
               />
             </motion.div>
