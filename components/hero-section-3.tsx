@@ -14,8 +14,7 @@ export function HeroSection3() {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -105,7 +104,7 @@ export function HeroSection3() {
       </div>
 
       <motion.div
-        style={{ y, opacity }}
+        style={{ y }}
         className='container mx-auto px-4 sm:px-6 relative z-10 w-full max-w-[100vw] py-12 md:py-16'
       >
         <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto items-center'>
@@ -214,23 +213,23 @@ export function HeroSection3() {
 
           {/* Right Side - Image */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className='relative lg:flex hidden items-center justify-center'
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className='relative flex items-center justify-center mt-8 lg:mt-0'
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className='relative w-full h-[70vh] md:h-[75vh] lg:h-[80vh] rounded-3xl overflow-hidden '
+              className='relative w-full h-[50vh] sm:h-[60vh] md:h-[65vh] lg:h-[80vh] max-w-md lg:max-w-full rounded-3xl overflow-hidden'
             >
               <Image
                 src='/images/mine-4.png'
                 alt='Ismail Abdifadil - Full Stack Developer'
                 fill
-                sizes='(max-width: 1024px) 0vw, 50vw'
+                sizes='(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw'
                 className='object-cover object-top'
-                quality={90}
+                quality={95}
                 priority
               />
             </motion.div>
