@@ -110,7 +110,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             alt={`${project.title} - Project Screenshot`}
             fill
             sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
-            className='object-cover'
+            className='object-cover object-top'
             quality={85}
             loading={index < 3 ? 'eager' : 'lazy'}
             priority={index < 3}
