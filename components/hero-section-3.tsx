@@ -112,7 +112,7 @@ export function HeroSection3() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className='space-y-4'
             >
               <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
@@ -133,9 +133,9 @@ export function HeroSection3() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className='text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0'
             >
               Transforming ideas into elegant, scalable solutions using modern
@@ -145,9 +145,9 @@ export function HeroSection3() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className='flex flex-wrap gap-4 justify-center lg:justify-start'
             >
               <motion.div
@@ -180,9 +180,9 @@ export function HeroSection3() {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               className='grid grid-cols-3 gap-2 sm:gap-4 pt-8'
             >
               {stats.map((stat, index) => (
@@ -190,7 +190,7 @@ export function HeroSection3() {
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
                   whileHover={{ scale: 1.05 }}
                   className='relative group'
                 >
@@ -211,21 +211,23 @@ export function HeroSection3() {
 
           {/* Right Side - Image */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className='relative lg:flex hidden items-end h-full'
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className='relative w-full h-[85vh] rounded-t-3xl overflow-hidden'
+              className='relative w-full h-[85vh] rounded-t-3xl overflow-hidden '
             >
               <Image
                 src='/images/mine-4.png'
-                alt='Ismail Abdifadil'
+                alt='Ismail Abdifadil - Full Stack Developer'
                 fill
+                sizes='(max-width: 1024px) 0vw, 50vw'
                 className='object-cover object-top'
+                quality={90}
                 priority
               />
             </motion.div>
@@ -237,7 +239,7 @@ export function HeroSection3() {
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
         className='absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent'
       />
     </section>

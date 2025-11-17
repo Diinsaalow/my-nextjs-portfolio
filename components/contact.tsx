@@ -45,7 +45,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           className='text-center mb-12'
         >
           <h2 className='text-3xl md:text-4xl font-bold text-gray-900 dark:text-white'>
@@ -63,7 +63,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <h3 className='text-2xl font-bold text-gray-900 dark:text-white mb-6'>
               Contact Information
@@ -74,7 +74,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.4 }}
+                transition={{ delay: 0.2, duration: 0.3 }}
                 whileHover={{ x: 5 }}
                 className='flex items-start'
               >
@@ -98,7 +98,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.4 }}
+                transition={{ delay: 0.25, duration: 0.3 }}
                 whileHover={{ x: 5 }}
                 className='flex items-start'
               >
@@ -122,7 +122,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.4 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
                 whileHover={{ x: 5 }}
                 className='flex items-start'
               >
@@ -144,7 +144,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.3 }}
               className='mt-8'
             >
               <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-4'>
@@ -216,7 +216,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
           >
             <form onSubmit={handleSubmit} className='space-y-6'>
               <div>

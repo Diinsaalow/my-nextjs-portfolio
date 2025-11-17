@@ -90,8 +90,8 @@ const cardVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: index * 0.1,
-      duration: 0.5,
+      delay: index * 0.08,
+      duration: 0.4,
       ease: 'easeOut',
     },
   }),
@@ -103,8 +103,8 @@ const skillVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * 0.05,
-      duration: 0.3,
+      delay: index * 0.03,
+      duration: 0.25,
     },
   }),
 };
@@ -116,7 +116,7 @@ export function SkillsSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
         className='space-y-4 text-center mb-12'
       >
         <h2 className='text-3xl md:text-4xl font-bold tracking-tight'>
@@ -151,8 +151,8 @@ export function SkillsSection() {
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{
-                    delay: categoryIndex * 0.1 + 0.2,
-                    duration: 0.5,
+                    delay: categoryIndex * 0.08 + 0.15,
+                    duration: 0.4,
                     ease: 'backOut',
                   }}
                   className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3'

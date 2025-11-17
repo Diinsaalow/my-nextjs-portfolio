@@ -10,8 +10,8 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * 0.15,
-      duration: 0.5,
+      delay: index * 0.1,
+      duration: 0.4,
       ease: 'easeOut',
     },
   }),
@@ -24,7 +24,7 @@ export function EducationSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
         className='space-y-4 text-center mb-12'
       >
         <h2 className='text-3xl md:text-4xl font-bold tracking-tight'>
@@ -51,7 +51,7 @@ export function EducationSection() {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 + 0.3, duration: 0.3 }}
+              transition={{ delay: index * 0.1 + 0.2, duration: 0.3 }}
               className='w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4'
             >
               <GraduationCap className='w-6 h-6 text-primary' />
@@ -85,7 +85,7 @@ export function EducationSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 + 0.5, duration: 0.3 }}
+              transition={{ delay: index * 0.1 + 0.3, duration: 0.3 }}
               className='mt-4'
             >
               <span

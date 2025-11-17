@@ -10,8 +10,8 @@ const cardVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: index * 0.15,
-      duration: 0.5,
+      delay: index * 0.1,
+      duration: 0.4,
       ease: 'easeOut',
     },
   }),
@@ -24,7 +24,7 @@ export function ExperienceSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
         className='space-y-4 text-center mb-12'
       >
         <h2 className='text-3xl md:text-4xl font-bold tracking-tight'>
@@ -52,7 +52,7 @@ export function ExperienceSection() {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 + 0.3, duration: 0.3 }}
+              transition={{ delay: index * 0.1 + 0.2, duration: 0.3 }}
               className='absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background'
             />
 
@@ -85,8 +85,8 @@ export function ExperienceSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{
-                      delay: index * 0.15 + 0.4 + techIndex * 0.05,
-                      duration: 0.3,
+                      delay: index * 0.1 + 0.3 + techIndex * 0.03,
+                      duration: 0.25,
                     }}
                     whileHover={{ scale: 1.1 }}
                     className='px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium cursor-default'

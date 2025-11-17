@@ -51,8 +51,8 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * 0.1,
-      duration: 0.5,
+      delay: index * 0.08,
+      duration: 0.4,
       ease: 'easeOut',
     },
   }),
@@ -62,8 +62,8 @@ const imageVariants = {
   hover: {
     scale: 1.05,
     transition: {
-      duration: 0.4,
-      ease: 'easeInOut',
+      duration: 0.3,
+      ease: 'easeOut',
     },
   },
 };
@@ -74,17 +74,17 @@ const techIconVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      delay: 0.3 + index * 0.1,
-      duration: 0.3,
+      delay: 0.2 + index * 0.05,
+      duration: 0.25,
       ease: 'backOut',
     },
   }),
   hover: {
-    scale: 1.2,
+    scale: 1.15,
     rotate: 360,
     transition: {
-      duration: 0.4,
-      ease: 'easeInOut',
+      duration: 0.3,
+      ease: 'easeOut',
     },
   },
 };
@@ -101,16 +101,19 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       className='group relative overflow-hidden rounded-lg bg-white dark:bg-[#0A0E1A] border border-gray-200 dark:border-[#1A1E2E] flex flex-col h-full hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-blue-900/20 transition-shadow duration-300'
     >
       <motion.div
-        className='relative aspect-video overflow-hidden'
+        className='relative aspect-video overflow-hidden bg-muted'
         whileHover='hover'
       >
-        <motion.div variants={imageVariants}>
+        <motion.div variants={imageVariants} className='h-full w-full'>
           <Image
             src={project.image}
-            alt={project.title}
-            height={1200}
-            width={1200}
+            alt={`${project.title} - Project Screenshot`}
+            fill
+            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
             className='object-cover'
+            quality={85}
+            loading={index < 3 ? 'eager' : 'lazy'}
+            priority={index < 3}
           />
         </motion.div>
       </motion.div>
@@ -120,7 +123,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.4 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
           className='text-2xl font-bold mb-2 text-gray-900 dark:text-white'
         >
           {project.title}
@@ -129,7 +132,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.4 }}
+          transition={{ delay: 0.15, duration: 0.3 }}
           className='text-gray-600 dark:text-gray-400 mb-auto'
         >
           {project.description}
@@ -168,7 +171,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.25, duration: 0.3 }}
           >
             {project.liveUrl && (
               <motion.a
