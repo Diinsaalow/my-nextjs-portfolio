@@ -34,7 +34,7 @@ export function HeroSection3() {
     <section
       id='home'
       ref={containerRef}
-      className='relative h-screen w-full flex items-center justify-center overflow-hidden'
+      className='relative h-screen w-full flex items-center justify-center overflow-hidden max-w-[100vw]'
     >
       {/* Grid Pattern Background */}
       <GridPattern
@@ -46,7 +46,7 @@ export function HeroSection3() {
         ]}
         className={cn(
           '[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]',
-          '-inset-x-12 inset-y-[-60%] h-[170%] skew-y-12'
+          'inset-0'
         )}
       />
 
@@ -62,7 +62,7 @@ export function HeroSection3() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className='absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary/20 to-primary/35 rounded-full blur-3xl'
+          className='absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-br from-primary/20 to-primary/35 rounded-full blur-3xl'
         />
         <motion.div
           animate={{
@@ -74,7 +74,7 @@ export function HeroSection3() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className='absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-primary/20 to-primary/20 rounded-full blur-3xl'
+          className='absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-primary/20 to-primary/20 rounded-full blur-3xl'
         />
 
         {/* Floating particles */}
@@ -103,9 +103,9 @@ export function HeroSection3() {
 
       <motion.div
         style={{ y, opacity }}
-        className='container mx-auto px-4 relative z-10 w-full h-full'
+        className='container mx-auto px-4 sm:px-6 relative z-10 w-full h-full max-w-[100vw]'
       >
-        <div className='grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto h-full'>
+        <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto h-full'>
           {/* Left Content */}
           <div className='space-y-8 flex flex-col justify-center'>
             {/* Badge */}
@@ -195,7 +195,7 @@ export function HeroSection3() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className='grid grid-cols-3 gap-4 pt-8'
+              className='grid grid-cols-3 gap-2 sm:gap-4 pt-8'
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -207,10 +207,12 @@ export function HeroSection3() {
                   className='relative group'
                 >
                   <div className='border absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-lg  group-hover:blur-md transition-all' />
-                  <div className='relative p-4 rounded-lg border border-border/50 bg-background/50 '>
-                    <stat.icon className='w-5 h-5 text-primary mb-2' />
-                    <div className='text-2xl font-bold'>{stat.value}</div>
-                    <div className='text-xs text-muted-foreground'>
+                  <div className='relative p-2 sm:p-4 rounded-lg border border-border/50 bg-background/50 '>
+                    <stat.icon className='w-4 h-4 sm:w-5 sm:h-5 text-primary mb-1 sm:mb-2' />
+                    <div className='text-lg sm:text-2xl font-bold'>
+                      {stat.value}
+                    </div>
+                    <div className='text-[10px] sm:text-xs text-muted-foreground'>
                       {stat.label}
                     </div>
                   </div>
