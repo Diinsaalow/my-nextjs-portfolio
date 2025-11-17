@@ -1,6 +1,6 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Code2, Palette, Rocket, Sparkles } from 'lucide-react';
+import { ArrowRight, Code2, Palette, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
@@ -107,19 +107,7 @@ export function HeroSection3() {
       >
         <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto h-full'>
           {/* Left Content */}
-          <div className='space-y-8 flex flex-col justify-center'>
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm'>
-                <Rocket className='w-4 h-4 text-primary' />
-                <span className='text-sm font-medium'>Available for work</span>
-              </div>
-            </motion.div>
-
+          <div className='space-y-6 sm:space-y-8 flex flex-col justify-center text-center lg:text-left'>
             {/* Main Heading with Gradient */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -148,7 +136,7 @@ export function HeroSection3() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='text-lg text-muted-foreground max-w-xl'
+              className='text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0'
             >
               Transforming ideas into elegant, scalable solutions using modern
               technologies. Specialized in React, Next.js, and full-stack
@@ -160,7 +148,7 @@ export function HeroSection3() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className='flex flex-wrap gap-4'
+              className='flex flex-wrap gap-4 justify-center lg:justify-start'
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
