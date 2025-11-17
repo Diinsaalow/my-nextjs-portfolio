@@ -84,7 +84,7 @@ export function Header() {
               scrollToSection('#home');
             }}
           >
-            Diinsaalow
+            Ismail A.
           </a>
 
           {/* Desktop Navigation */}

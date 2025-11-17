@@ -156,7 +156,8 @@ export default function Contact() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href='#'
+                    target='_blank'
+                    href='https://x.com/IsmailAbdifadil'
                     className='bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors inline-block'
                     aria-label='Twitter'
                   >
@@ -174,7 +175,8 @@ export default function Contact() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href='#'
+                    target='_blank'
+                    href='https://www.linkedin.com/in/ismail-abdifadil/'
                     className='bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors inline-block'
                     aria-label='LinkedIn'
                   >
@@ -192,7 +194,8 @@ export default function Contact() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href='#'
+                    target='_blank'
+                    href='https://github.com/Diinsaalow/'
                     className='bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors inline-block'
                     aria-label='GitHub'
                   >
