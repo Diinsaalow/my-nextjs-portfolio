@@ -3,7 +3,7 @@
     {
       "id": 4,
       "position": "Full-stack Developer",
-      "company": "JTech",
+      "company": "Jamhuriya Technology Solutions",
       "duration": "Present",
       "period": "February 2025 - Present",
       "technologies": [
@@ -47,6 +47,14 @@
       "institution": "Jamhuriya University of Science and Technology (JUST)",
       "period": "2022-Present",
       "status": "In Progress",
+      "location": "Mogadishu, Somalia"
+    },
+    {
+      "id": 3,
+      "degree": "Graphic & Visual Design Bootcamp",
+      "institution": "Jamhuriya Technology Solutions",
+      "period": "2024",
+      "status": "Completed",
       "location": "Mogadishu, Somalia"
     },
     {
