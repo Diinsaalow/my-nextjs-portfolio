@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,17 +25,42 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    // Validate environment variables
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS environment variables are not configured');
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 3000);
+      return;
+    }
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Ismail Abdifadil',
+        },
+        publicKey
+      );
+
+      console.log('Email sent successfully:', result.text);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Failed to send email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-      // Reset status after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
+      setTimeout(() => setSubmitStatus(null), 5000);
     }
   };
 
