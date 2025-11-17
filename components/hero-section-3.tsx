@@ -129,7 +129,7 @@ export function HeroSection3() {
             >
               <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
                 <span className='block'>Building the</span>
-                <span className='block bg-gradient-to-r from-primary via-purple-500 to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>
+                <span className='block bg-gradient-to-r from-primary via-primary/50 to-primary bg-clip-text text-transparent  bg-[length:200%_auto]'>
                   Future of Web
                 </span>
               </h1>
