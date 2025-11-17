@@ -14,7 +14,7 @@ export interface Project {
   longDescription: string;
   image: string;
   technologies: string[];
-  techIcons: TechIcon[];
+  techIcons?: TechIcon[];
   liveUrl?: string;
   githubUrl?: string;
   private?: boolean;

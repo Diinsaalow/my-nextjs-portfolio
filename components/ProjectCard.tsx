@@ -3,10 +3,45 @@
 import Image from 'next/image';
 import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '@/lib/data';
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiTypescript,
+  SiJavascript,
+  SiMongodb,
+  SiPostgresql,
+  SiFirebase,
+  SiExpress,
+  SiPrisma,
+  SiGraphql,
+} from 'react-icons/si';
+import { IconType } from 'react-icons';
 
 interface ProjectCardProps {
   project: Project;
 }
+
+// Map technology names to their icons
+const techIconMap: Record<string, IconType> = {
+  'Next.js': SiNextdotjs,
+  React: SiReact,
+  'Tailwind CSS': SiTailwindcss,
+  'Node.js': SiNodedotjs,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  MongoDB: SiMongodb,
+  PostgreSQL: SiPostgresql,
+  Firebase: SiFirebase,
+  Express: SiExpress,
+  Prisma: SiPrisma,
+  GraphQL: SiGraphql,
+};
+
+const getTechIcon = (techName: string): IconType | null => {
+  return techIconMap[techName] || null;
+};
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -31,28 +66,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className='mt-8 flex justify-between items-center'>
           <div className='flex -space-x-2'>
-            {project.techIcons.map((icon, index) => (
-              <div
-                key={index}
-                className='w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-[#151A2D] border-2 border-white dark:border-[#0A0E1A] overflow-hidden'
-              >
-                <div className='w-6 h-6 flex items-center justify-center'>
-                  {icon.type === 'letter' ? (
-                    <span className='text-gray-900 dark:text-white font-bold text-sm'>
-                      {icon.content}
-                    </span>
+            {project.technologies.slice(0, 4).map((tech, index) => {
+              const Icon = getTechIcon(tech);
+              return (
+                <div
+                  key={index}
+                  className='w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-[#151A2D] border-2 border-white dark:border-[#0A0E1A] overflow-hidden'
+                  title={tech}
+                >
+                  {Icon ? (
+                    <Icon className='w-5 h-5 text-gray-900 dark:text-white' />
                   ) : (
-                    <Image
-                      src={icon.icon || ''}
-                      alt={icon.name || `Tech ${index}`}
-                      width={24}
-                      height={24}
-                      className='object-contain'
-                    />
+                    <span className='text-gray-900 dark:text-white font-bold text-xs'>
+                      {tech.substring(0, 2).toUpperCase()}
+                    </span>
                   )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className='flex items-center gap-4'>
