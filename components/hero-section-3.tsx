@@ -34,7 +34,7 @@ export function HeroSection3() {
     <section
       id='home'
       ref={containerRef}
-      className='relative h-screen w-full flex items-center justify-center overflow-hidden max-w-[100vw]'
+      className='relative min-h-screen w-full flex items-center justify-center overflow-hidden max-w-[100vw] pt-20 md:pt-24'
     >
       {/* Grid Pattern Background */}
       <GridPattern
@@ -46,9 +46,12 @@ export function HeroSection3() {
         ]}
         className={cn(
           '[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]',
-          'inset-0'
+          'inset-0 opacity-60'
         )}
       />
+
+      {/* Primary Color Overlay */}
+      <div className='absolute inset-0  bg-gradient-to-br from-transparent via-primary/50 to-transparent opacity-30 pointer-events-none' />
 
       {/* Animated background shapes */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
@@ -76,7 +79,7 @@ export function HeroSection3() {
           }}
           className='absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-primary/20 to-primary/20 rounded-full blur-3xl'
         />
-
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-background/80 pointer-events-none' />
         {/* Floating particles */}
         {[...Array(5)].map((_, i) => (
           <motion.div
@@ -103,9 +106,9 @@ export function HeroSection3() {
 
       <motion.div
         style={{ y, opacity }}
-        className='container mx-auto px-4 sm:px-6 relative z-10 w-full h-full max-w-[100vw]'
+        className='container mx-auto px-4 sm:px-6 relative z-10 w-full max-w-[100vw] py-12 md:py-16'
       >
-        <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto h-full'>
+        <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto items-center'>
           {/* Left Content */}
           <div className='space-y-6 sm:space-y-8 flex flex-col justify-center text-center lg:text-left'>
             {/* Main Heading with Gradient */}
@@ -214,12 +217,12 @@ export function HeroSection3() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className='relative lg:flex hidden items-end h-full'
+            className='relative lg:flex hidden items-center justify-center'
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className='relative w-full h-[85vh] rounded-t-3xl overflow-hidden '
+              className='relative w-full h-[70vh] md:h-[75vh] lg:h-[80vh] rounded-3xl overflow-hidden '
             >
               <Image
                 src='/images/mine-4.png'
