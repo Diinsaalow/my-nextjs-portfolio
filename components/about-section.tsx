@@ -140,7 +140,7 @@ export function AboutSection() {
               through blog posts and tutorials.
             </motion.p>
           </div>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -154,7 +154,7 @@ export function AboutSection() {
                 Download Resume
               </a>
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </div>
