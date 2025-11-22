@@ -5,7 +5,7 @@
     "description": "Modern, responsive consulting website featuring clean UI, clear service sections, and a professional brand experience.",
     "longDescription": "A complete multi-page website built for Ilbaay Consulting with a clean, modern interface. The site includes Home, About, Services, and Contact pages with a blue-green brand palette, smooth navigation, responsive layouts, and optimized performance.",
     "image": "/images/ilbaay.jpg",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js"],
     "liveUrl": "https://ilbaayconsulting.org/",
     "githubUrl": "https://github.com/",
     "private": true
@@ -16,7 +16,7 @@
     "description": "A clean and responsive consulting firm website showcasing impact, services, and organizational background.",
     "longDescription": "Developed a modern website for Daljir Consulting with professional layouts, impact statistics, service sections, partner logos, and clear calls-to-action. The site highlights their mission, consulting programs, and organizational achievements.",
     "image": "/images/daljir.jpg",
-    "technologies": ["React", "Next.js", "Tailwind CSS"],
+    "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     "liveUrl": "https://daljirconsulting.org/",
     "githubUrl": "https://github.com/",
     "private": true
@@ -27,7 +27,7 @@
     "description": "Youth organization website showcasing programs, mission, impact, and community initiatives.",
     "longDescription": "Created a modern, multi-page website for Barbaar Organization (BYEO), featuring sections for programs, youth empowerment, child protection, organizational mission, milestones, and donation engagement. Designed with clean UI, soft gradients, and smooth navigation.",
     "image": "/images/barbaar.jpg",
-    "technologies": ["React", "Next.js", "Tailwind CSS"],
+    "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     "liveUrl": "https://barbaarorg.org/",
     "githubUrl": "https://github.com/",
     "private": true
@@ -38,7 +38,7 @@
     "description": "Multi-page research institute website highlighting mission, expertise, publications, and impact.",
     "longDescription": "Designed a professional website for RADI, featuring research-focused layouts, impact statistics, organizational values, expertise categories, calls-to-action, and optimized navigation. Built for credibility, clarity, and institutional presentation.",
     "image": "/images/raadi-org-project.jpg",
-    "technologies": ["Next.js", "React", "Tailwind CSS"],
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     "liveUrl": "https://raadi.org/",
     "githubUrl": "https://github.com/",
     "private": true
@@ -49,7 +49,7 @@
     "description": "Complete redesign of HOAIPS institutional website with modern UI, responsive pages, and improved usability.",
     "longDescription": "Redesigned the entire HOAIPS website into a clean, multi-page platform with improved visuals, faster performance, better navigation, and modern information structure. The new design highlights programs, mission, partnerships, and organizational impact.",
     "image": "/images/hoaips.jpg",
-    "technologies": ["React", "Next.js", "Tailwind CSS"],
+    "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     "liveUrl": "https://hoaips.org/",
     "githubUrl": "https://github.com/",
     "private": true

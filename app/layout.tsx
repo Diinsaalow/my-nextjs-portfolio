@@ -1,9 +1,9 @@
-import type React from 'react';
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Footer } from '@/components/footer';
+import type React from 'react'
+import type { Metadata } from 'next'
+import localFont from 'next/font/local'
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
+import { Footer } from '@/components/footer'
 
 const cabinetGrotesk = localFont({
   src: [
@@ -24,7 +24,7 @@ const cabinetGrotesk = localFont({
     },
   ],
   variable: '--font-cabinet-grotesk',
-});
+})
 
 export const metadata: Metadata = {
   title: 'Ismail A. | Portfolio',
@@ -32,19 +32,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/images/favicon.png',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${cabinetGrotesk.variable} font-sans`}>
         <ThemeProvider
           attribute='class'
-          defaultTheme='dark'
+          defaultTheme='light'
           enableSystem={false}
         >
           {children}
@@ -52,5 +52,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
