@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { ModeToggle } from '@/components/mode-toggle';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { useState, useEffect } from 'react'
+import { cn } from '@/lib/utils'
+import { ModeToggle } from '@/components/mode-toggle'
+import { Menu, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -14,60 +14,60 @@ const navItems = [
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
   { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Contact', href: '#contact' },
-];
+  // { name: 'Contact', href: '#contact' },
+]
 
 export function Header() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home')
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       // Update header style based on scroll position
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 10)
 
       // Update active section based on scroll position
-      const sections = document.querySelectorAll('section[id]');
-      const scrollPosition = window.scrollY + 100;
+      const sections = document.querySelectorAll('section[id]')
+      const scrollPosition = window.scrollY + 100
 
       sections.forEach((section) => {
-        const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = (section as HTMLElement).offsetHeight;
-        const sectionId = section.getAttribute('id') || '';
+        const sectionTop = (section as HTMLElement).offsetTop
+        const sectionHeight = (section as HTMLElement).offsetHeight
+        const sectionId = section.getAttribute('id') || ''
 
         if (
           scrollPosition >= sectionTop &&
           scrollPosition < sectionTop + sectionHeight
         ) {
-          setActiveSection(sectionId);
+          setActiveSection(sectionId)
         }
-      });
-    };
+      })
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Close mobile menu when window is resized to desktop size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false);
+        setMobileMenuOpen(false)
       }
-    };
+    }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
+    const element = document.querySelector(href)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false); // Close mobile menu after clicking
+      element.scrollIntoView({ behavior: 'smooth' })
+      setMobileMenuOpen(false) // Close mobile menu after clicking
     }
-  };
+  }
 
   return (
     <header
@@ -84,8 +84,8 @@ export function Header() {
             href='#home'
             className='font-bold  text-lg'
             onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('#home');
+              e.preventDefault()
+              scrollToSection('#home')
             }}
           >
             Ismail A.
@@ -98,8 +98,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
+                  e.preventDefault()
+                  scrollToSection(item.href)
                 }}
                 className={cn(
                   'text-lg font-medium transition-colors hover:text-primary',
@@ -143,8 +143,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
+                  e.preventDefault()
+                  scrollToSection(item.href)
                 }}
                 className={cn(
                   'py-2 px-3 rounded-md transition-colors hover:bg-muted',
@@ -160,5 +160,5 @@ export function Header() {
         </div>
       )}
     </header>
-  );
+  )
 }
